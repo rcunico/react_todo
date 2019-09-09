@@ -17,7 +17,7 @@ class App extends React.Component {
   //Lifecycle method - runs right after the component mounts
 
   componentDidMount() {
-    axios.get('http://jsonplaceholder.typicode.com/todos?_limit=10')
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
     .then(res => this.setState({todos: res.data }))
   }
 
@@ -39,7 +39,7 @@ class App extends React.Component {
 
     //Add Todo
     addTodo = (title) => {
-      axios.post('http://jsonplaceholder.typicode.com/todos', {
+      axios.post('https://jsonplaceholder.typicode.com/todos', {
         title,
         completed: false
       })
